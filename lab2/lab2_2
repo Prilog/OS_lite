@@ -1,0 +1,4 @@
+#!/bin/bash
+grep "] (!!)" Xorg.0.log & grep "] (II)" Xorg.0.log | sed -e "s/] (!!)/] Warning:/g" | sed -e "s/] (II)/] Information:/g" > tmp
+sort -nrk 3 tmp > full.log
+rm tmp
