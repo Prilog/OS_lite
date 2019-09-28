@@ -1,0 +1,5 @@
+#!/bin/bash
+printf "" > emails.lst
+substr="\n"
+repl=", "
+grep -r -s -E --no-filename '<[A-Za-z\.]+@[A-Za-z\.]+>' -o /etc/ | tr -d '<' | tr -d '>' | tr "\n" "," > emails.lst
