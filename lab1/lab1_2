@@ -1,0 +1,10 @@
+#!/bin/bash
+let a
+if [[ $1 -gt $2 ]]
+then let a=$1
+else let a=$2
+fi
+if [[ $3 -gt $a ]]
+then let a=$3
+fi
+echo $a
