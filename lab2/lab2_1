@@ -1,0 +1,4 @@
+#!/bin/bash
+printf "" > errors.log
+grep -r  --no-messages --no-filename "^Nov " /var/log >> errors.log
+grep -E "/[[:alnum:]]+" errors.log
