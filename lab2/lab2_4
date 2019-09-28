@@ -1,0 +1,4 @@
+#!/bin/bash
+
+name=`grep -r "^#!" /Users/sementrapeznikov/lab2 | awk -F ":" '{ print $2 }' | sort | uniq -c | sort -nr --field-separator=" " | head -1 | awk '{ print $2}'`
+grep -r $name /Users/sementrapeznikov/lab2 | head -1
