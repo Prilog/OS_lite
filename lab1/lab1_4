@@ -1,0 +1,11 @@
+#!/bin/bash
+res=0
+cur=1
+x=1
+while [[ x -ne 0 ]]
+do
+read cur
+x=cur%2
+let res++
+done
+echo $res
